@@ -1,5 +1,5 @@
-##springboot使用fastjson
-###HttpMessageConverter中json转换使用fastjson
+## springboot使用fastjson
+### HttpMessageConverter中json转换使用fastjson
 在fastjson的 wiki 中的集成方式是
 ```
  FastJsonHttpMessageConverter converter = new FastJsonHttpMessageConverter();
@@ -18,6 +18,6 @@ for(int i = 0; i < converters.size(); i++) {
    }
 }
 ```
-###spring redis中使用 fastjson
+### spring redis中使用 fastjson
 如 wiki 中写的在RedisTemplate中使用GenericFastJsonRedisSerializer，同样是放入 String 类型的结果时，会多加一层引号。单个项目中的存取没啥问题，可是当其他业务使用该缓存时，会有对接问题。
 选择的方式是使用 StringRedisTemplate,所有值都是String序列化，封装底层方法来使用 fastjson 转换。
